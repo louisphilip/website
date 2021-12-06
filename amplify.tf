@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "eu-west-1"
+}
+
 resource "aws_amplify_app" "personal-website" {
   name       = "personal-website"
   repository = "https://github.com/louisphilip/website.git"
