@@ -16,7 +16,7 @@ resource "aws_amplify_app" "example" {
   name       = "app"
   repository = "https://github.com/louisphilip/website"
   # GitHub personal access token
-  access_token = "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"
+  access_token = "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"
 
   enable_branch_auto_build = "true"
 
