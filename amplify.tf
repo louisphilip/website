@@ -2,38 +2,50 @@ provider "aws" {
   region = "eu-west-1"
 }
 
+terraform {
+  backend "remote" {
+    organization = "louisphilip"
+
+    workspaces {
+      name = "personal-website"
+    }
+  }
+}
+
 resource "aws_amplify_app" "example" {
-  name       = "example"
+  name       = "app"
   repository = "https://github.com/louisphilip/website"
+  # GitHub personal access token
+  access_token = "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"
 
-  # The default build_spec added by the Amplify Console for React.
-  build_spec = <<-EOT
-    version: 0.1
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - yarn install
-        build:
-          commands:
-            - yarn run build
-      artifacts:
-        baseDirectory: build
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-  EOT
+  enable_branch_auto_build = "true"
 
-  # The default rewrites and redirects added by the Amplify Console.
+  # Setup redirect from https://example.com to https://www.example.com
   custom_rule {
-    source = "/<*>"
-    status = "404"
-    target = "/index.html"
+    source = "https://www.louisphilip.co.za"
+    status = "302"
+    target = "https://www.louisphilip.co.za"
+  }
+}
+
+resource "aws_amplify_branch" "master" {
+  app_id      = aws_amplify_app.example.id
+  branch_name = "main"
+}
+
+resource "aws_amplify_domain_association" "example" {
+  app_id      = aws_amplify_app.example.id
+  domain_name = "louisphilip.co.za"
+
+  # https://example.com
+  sub_domain {
+    branch_name = aws_amplify_branch.master.branch_name
+    prefix      = ""
   }
 
-  environment_variables = {
-    ENV = "test"
+  # https://www.example.com
+  sub_domain {
+    branch_name = aws_amplify_branch.master.branch_name
+    prefix      = "www"
   }
 }
