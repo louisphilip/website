@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>LP | Home </title>
+  <title>Gaze | Home Stockholm</title>
 
   <meta charset="utf-8">
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -9,15 +9,16 @@
   <meta name="description" content="">
   
   <!-- Google Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Barlow:400,600,700%7CRoboto:400,400i,700%7CNoto+Serif:400i' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700%7CRoboto:400,400i,700%7CNoto+Serif:400i' rel='stylesheet'>
 
   <!-- Css -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="revolution/css/settings.css" />
   <link rel="stylesheet" href="css/font-icons.css" />
+  <link rel="stylesheet" href="css/rev-slider.css" />
   <link rel="stylesheet" href="css/sliders.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/colors/red.css" />
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="img/favicon.ico">
@@ -27,7 +28,7 @@
 
 </head>
 
-<body class="relative onepage london" data-spy="scroll" data-offset="60" data-target=".navbar-static-top" id="home">
+<body class="relative raleway">
 
   <!-- Preloader -->
   <div class="loader-mask">
@@ -39,19 +40,33 @@
 
   <div class="main-wrapper oh">
 
-    <header class="nav-type-1 sticky-on-mobile">
+    <header class="nav-type-6">
+
+      <!-- Fullscreen search -->
+      <div class="search-wrap">
+        <div class="search-inner">
+          <div class="search-cell">
+            <form method="get">
+              <div class="search-field-holder">
+                <input type="search" class="form-control main-search-input" placeholder="Search for">
+                <i class="ui-close search-close" id="search-close"></i>
+              </div>            
+            </form>
+          </div>
+        </div>        
+      </div> <!-- end fullscreen search -->
     
       <nav class="navbar navbar-static-top">
-        <div class="navigation" id="sticky-nav">
-          <div class="container-fluid semi-fluid relative">
+        <div class="navigation">
+          <div class="container relative">
 
             <div class="row">
 
               <div class="navbar-header">
                 <!-- Logo -->
                 <div class="logo-container">
-                  <div class="logo-wrap local-scroll">
-                    <a href="#home">
+                  <div class="logo-wrap">
+                    <a href="index-ny.html">
                       <img class="logo-dark" src="img/logo_dark.png" alt="logo">
                     </a>
                   </div>
@@ -66,28 +81,225 @@
 
               <div class="nav-wrap right">
                 <div class="collapse navbar-collapse text-center" id="navbar-collapse">
-                  <ul class="nav navbar-nav local-scroll navbar-right" id="onepage-nav">
-                    <li>
-                      <a href="#home" class="underline-link">Home</a>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+
+                    <li class="dropdown">
+                      <a href="#">Home</a>
+                      <i class="fa fa-angle-down dropdown-trigger"></i>
+                      <ul class="dropdown-menu megamenu-wide">
+                        <li>
+                          <div class="megamenu-wrap container">
+                            <div class="row">
+
+                              <div class="col-md-3 megamenu-item no-headings">
+                                <ul class="menu-list">
+                                  <li><a href="index-tokyo.html">Startup Tokyo</a></li>
+                                  <li><a href="index-ny.html">Business New York</a></li>
+                                  <li><a href="index-paris.html">Onepage Paris</a></li>
+                                  <li><a href="index-toronto.html">Agency Toronto</a></li>
+                                  <li><a href="index-melbourne.html">Corporate Melbourne</a></li>
+                                </ul>
+                              </div>
+
+                              <div class="col-md-3 megamenu-item no-headings">
+                                <ul class="menu-list">
+                                  <li><a href="index-sydney.html">Studio Sydney</a></li>
+                                  <li><a href="index-vancouver.html">Agency Vancouver</a></li>
+                                  <li><a href="index-athens.html">Photography Athens</a></li>
+                                  <li><a href="index-milan.html">Shop Milan</a></li>
+                                  <li><a href="index-oslo.html">Photography Oslo</a></li>
+                                </ul>
+                              </div>
+
+                              <div class="col-md-3 megamenu-item no-headings">
+                                <ul class="menu-list">
+                                  <li><a href="index-vienna.html">Agency Vienna</a></li>
+                                  <li><a href="index-madrid.html">Photography Madrid</a></li>
+                                  <li><a href="index-amsterdam.html">Portfolio Amsterdam</a></li>
+                                  <li><a href="index-stockholm.html">Minimal Stockholm</a></li>
+                                </ul>
+                              </div>
+
+                              <div class="col-md-3 megamenu-item no-headings">
+                                <ul class="menu-list">
+                                  <li><a href="index-berlin.html">Portfolio Berlin</a></li>
+                                  <li><a href="index-manila.html">Showcase Manila</a></li>
+                                  <li><a href="index-shanghai.html">App Landing Shanghai</a></li>
+                                  <li><a href="index-london.html">Resume vCard London</a></li>
+                                </ul>
+                              </div>
+
+                            </div> 
+                          </div>
+                        </li>
+                      </ul>
+                    </li> <!-- end features -->
+
+                    <li class="dropdown">
+                      <a href="#">Pages</a>
+                      <i class="fa fa-angle-down dropdown-trigger"></i>
+                      <ul class="dropdown-menu">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                        <li><a href="404.html">404</a></li>
+                      </ul>
                     </li>
-                    <li>
-                      <a href="#skills" class="underline-link">Skills</a>
+
+                    <li class="dropdown">
+                      <a href="#">Portfolio</a>
+                      <i class="fa fa-angle-down dropdown-trigger"></i>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                          <a href="#">Classic</a>
+                          <i class="fa fa-angle-down dropdown-trigger"></i>
+                          <ul class="dropdown-menu">
+                            <li><a href="portfolio-4-col.html">4 Columns</a></li>
+                            <li><a href="portfolio-3-col.html">3 Columns</a></li>
+                            <li><a href="portfolio-2-col.html">2 Columns</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                          <a href="#">Fullwidth</a>
+                          <i class="fa fa-angle-down dropdown-trigger"></i>
+                          <ul class="dropdown-menu">
+                            <li><a href="portfolio-5-col-wide.html">5 Columns</a></li>
+                            <li><a href="portfolio-4-col-wide.html">4 Columns</a></li>
+                            <li><a href="portfolio-3-col-wide.html">3 Columns</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                          <a href="#">With Title</a>
+                          <i class="fa fa-angle-down dropdown-trigger"></i>
+                          <ul class="dropdown-menu">
+                            <li><a href="portfolio-4-col-title.html">4 Columns</a></li>
+                            <li><a href="portfolio-3-col-title.html">3 Columns</a></li>
+                            <li><a href="portfolio-2-col-title.html">2 Columns</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                          <a href="#">With Description</a>
+                          <i class="fa fa-angle-down dropdown-trigger"></i>
+                          <ul class="dropdown-menu">
+                            <li><a href="portfolio-2-col-desc.html">2 Columns</a></li>
+                            <li><a href="portfolio-1-col-desc.html">1 Column</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="portfolio-masonry.html">Masonry</a>
+                        </li>
+                        <li class="dropdown-submenu">
+                          <a href="#">Single Project</a>
+                          <i class="fa fa-angle-down dropdown-trigger"></i>
+                          <ul class="dropdown-menu">
+                            <li><a href="portfolio-single.html">Standard</a></li>
+                            <li><a href="portfolio-single-2.html">Extended</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li> <!-- end portfolio -->
+
+                    <li class="dropdown">
+                      <a href="#">Blog</a>
+                      <i class="fa fa-angle-down dropdown-trigger"></i>
+                      <ul class="dropdown-menu">
+                        <li><a href="blog-standard.html">Standard</a></li>
+                        <li><a href="blog-masonry.html">Masonry</a></li>
+                        <li><a href="blog-single.html">Single Post</a></li>
+                        <li><a href="blog-no-sidebar.html">No Sidebar</a></li>
+                      </ul>
                     </li>
-                    <li>
-                      <a href="#portfolio" class="underline-link">Portfolio</a>
+
+                    <li class="dropdown">
+                      <a href="#">Shop</a>
+                      <i class="fa fa-angle-down dropdown-trigger"></i>
+                      <ul class="dropdown-menu">
+                        <li><a href="shop-catalog.html">Catalog</a></li>
+                        <li><a href="shop-single.html">Single Product</a></li>
+                        <li><a href="shop-cart.html">Cart</a></li>
+                        <li><a href="shop-checkout.html">Checkout</a></li>
+                      </ul>
                     </li>
-                    <li>
-                      <a href="#experience" class="underline-link">Experience</a>
-                    </li>                                                            
-                    <li>
-                      <a href="#education" class="underline-link">Education</a>
+
+                    <li class="dropdown">
+                      <a href="#">Elements</a>
+                      <i class="fa fa-angle-down dropdown-trigger"></i>
+                      <ul class="dropdown-menu megamenu-wide">
+                        <li>
+                          <div class="megamenu-wrap container">
+                            <div class="row">
+
+                              <div class="col-md-3 megamenu-item">
+                                <span>Common Elements</span>
+                                <ul class="menu-list">
+                                  <li><a href="accordions.html"><i class="fa fa-arrow-circle-o-down"></i>Accordions &amp; Toggles</a></li>
+                                  <li><a href="tabs.html"><i class="fa fa-folder-o"></i>Tabs</a></li>                                  
+                                  <li><a href="buttons.html"><i class="fa fa-hand-o-up"></i>Buttons</a></li>
+                                  <li><a href="forms.html"><i class="fa fa-pencil-square-o"></i>Form Elements</a></li>
+                                </ul>
+                              </div>
+
+                              <div class="col-md-3 megamenu-item">
+                                <span>Interactive Elements</span>
+                                <ul class="menu-list">
+                                  <li><a href="sliders.html"><i class="fa fa-clone"></i>Sliders</a></li>                                  
+                                  <li><a href="lightboxes.html"><i class="fa fa-image"></i>Lightboxes</a></li>
+                                  <li><a href="animations.html"><i class="fa fa-forward"></i>Animations</a></li>
+                                  <li><a href="pricing-tables.html"><i class="fa fa-dollar"></i>Pricing Tables</a></li>
+                                </ul>
+                              </div>
+
+                              <div class="col-md-3 megamenu-item">
+                                <span>Infographics</span>
+                                <ul class="menu-list">
+                                  <li><a href="icon-boxes.html"><i class="fa fa-lightbulb-o"></i>Icon Boxes</a></li>
+                                  <li><a href="counters.html"><i class="fa fa-sort-numeric-desc"></i>Counters</a></li>
+                                  <li><a href="pie-skills.html"><i class="fa fa-sliders"></i>Pies &amp; Skills</a></li>
+                                  <li><a href="socials.html"><i class="fa fa-twitter"></i>Social Icons</a></li>                                  
+                                </ul>
+                              </div>
+
+                              <div class="col-md-3 megamenu-item">
+                                <span>Typography</span>
+                                <ul class="menu-list">
+                                  <li><a href="columns.html"><i class="fa fa-columns"></i>Columns</a></li>
+                                  <li><a href="alert-boxes.html"><i class="fa fa-exclamation-triangle"></i>Alert Boxes</a></li>
+                                  <li><a href="tables.html"><i class="fa fa-table"></i>Tables</a></li>
+                                  <li><a href="typography.html"><i class="fa fa-text-width"></i>Typography</a></li>
+                                </ul>
+                              </div>
+
+                            </div> 
+                          </div>
+                        </li>
+                      </ul>
+                    </li> <!-- end elements -->
+
+                    <!-- Search -->
+                    <li class="nav-right hidden-sm hidden-xs">
+                      <ul>
+                        <li class="nav-search-wrap hidden-sm hidden-xs">
+                          <a href="#" class="nav-search search-trigger">
+                            <i class="ui-search"></i>
+                          </a>
+                        </li>
+                      </ul>
                     </li>
-                    <li>
-                      <a href="#contact" class="underline-link">Contact</a>
+
+                    <li id="mobile-search" class="hidden-lg hidden-md">
+                      <form method="get" class="mobile-search">
+                        <input type="search" class="form-control" placeholder="Search...">
+                        <button type="submit" class="search-button">
+                          <i class="ui-search"></i>
+                        </button>
+                      </form>
                     </li>
+
                   </ul> <!-- end menu -->
                 </div> <!-- end collapse -->
-              </div> <!-- end col -->         
+              </div> <!-- end col -->    
           
             </div> <!-- end row -->
           </div> <!-- end container -->
@@ -96,447 +308,282 @@
     </header>
 
     <div class="content-wrapper oh">
+      <main class="main-container">
+      
+        <!-- Revolution Slider -->
+        <section>
+          <div class="rev_slider_wrapper container" id="home">
+            <div class="rev_slider" id="slider8" data-version="5.0">
+              <ul>
+                <!-- HERO -->
+                <li data-fstransition="fade"
+                  data-transition="fade"
+                  data-slotamount="1"
+                  data-masterspeed="1000"
+                  data-delay="50000"
+                  data-title="Creative Minimalism">
 
-      <!-- Profile -->
-      <section class="section-wrap-lg pt-160 pb-110">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 mb-40">
-              <img src="img/profile.jpg" class="img-fw" alt="">              
-            </div>
-            <div class="col-sm-5 col-sm-offset-1 profile">
-              <h1>Hello!<br>I am Louis-Philip Shahim</h1>
-              <span class="occupation">AWS Cloud Engineer</span>   
-              <p>People who know me best say that I`m a kind-hearted and loving person. Other people have yet to confirm my mother's thoughts</p>
-              <table class="mt-40 mb-50">
-                <tr>
-                  <td>Age:</td>
-                  <td>28</td>
-                </tr>
-                <tr>
-                  <td>E-mail:</td>
-                  <td><a href="mailto:louisphilipshahim@gmail.com">louisphilipshahim@gmail.com</a></td>
-                </tr>
-                <tr>
-                  <td>Phone:</td>
-                  <td>+27 729985673</td>
-                </tr>
-                <tr>
-                  <td>Address:</td>
-                  <td><address>You wish you knew, don't you?</address></td>
-                </tr>
-                <tr>
-                  <td>Status:</td>
-                  <td>Available</td>
-                </tr>
-              </table>
-              <div class="social-icons nobase dark mb-40">
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-facebook"></i></a>                  
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-vimeo"></i></a>
-              </div>
-              <a href="#" class="btn btn-lg btn-color"><span>download resume</span></a>
-            </div>
-          </div>          
-        </div>
-      </section> <!-- end profile -->
+                  <!-- MAIN IMAGE -->
+                  <img src="img/revolution/stockholm_hero.jpg"
+                    alt=""
+                    data-bgposition="center center"
+                    data-bgrepeat="no-repeat"
+                    data-bgfit="cover"
+                    class="rev-slidebg">
 
-      <!-- divider -->
-      <div class="container">
-        <hr class="nomargin">
-      </div>
-
-      <!-- Professional skills -->      
-      <div class="section-wrap-lg" id="skills">
-        <div class="container">
-          <div class="row">
-
-            <div class="col-sm-4 mb-40">
-              <h2>Professional Skills</h2>              
-            </div>
-
-            <div class="col-sm-8">          
-              <div class="progress-bars skills-progress mb-0">
-
-                <h6>Web Design <span>88%</span></h6>
-                <div class="progress meter">
-                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="88" class="progress-bar" role="progressbar">
-                    <span class="sr-only">88% Complete</span>
+                  <!-- LAYER NR. 1 -->
+                  <div class="tp-caption hero-text alt-font bold"
+                    data-x="center"
+                    data-y="center"
+                    data-voffset="[-27,-27,-27,-22]"
+                    data-fontsize="[62,62,62,36]"
+                    data-textAlign="['center']"
+                    data-whitespace="[nowrap, nowrap, nowrap, nowrap]"
+                    data-transform_idle="o:1;s:700"
+                    data-transform_in="sX:0.7;sY:0.7;opacity:0;s:1000;e:Power3.easeInOut;"
+                    data-transform_out="sX:0.7;sY:0.7;opacity:0;s:1000;e:Power3.easeInOut;"
+                    data-start="1000"
+                    data-elementdelay="0.01">Everything You Need
                   </div>
-                </div>
 
-                <h6>Marketing <span>92%</span></h6>
-                <div class="progress meter">
-                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="92" class="progress-bar" role="progressbar">
-                    <span class="sr-only">92% Complete</span>
-                  </div>
-                </div>
-
-                <h6>WordPress <span>94%</span></h6>
-                <div class="progress meter">
-                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="94" class="progress-bar" role="progressbar">
-                    <span class="sr-only">94% Complete</span>
-                  </div>
-                </div>
-
-                <h6>Photography <span>78%</span></h6>
-                <div class="progress meter" id="animated-skills">
-                  <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="78" class="progress-bar" role="progressbar">
-                    <span class="sr-only">78% Complete</span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div> <!-- end professional skills -->
-
-      <!-- divider -->
-      <div class="container">
-        <hr class="nomargin">
-      </div>
-
-      <!-- Services -->
-      <section class="section-wrap-lg icon-boxes pb-50" id="services">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 mb-40">
-              <h2>My Services</h2>              
-            </div>
-
-            <div class="col-sm-4 mb-40">
-              <div class="service-item-box style-6">
-                <div class="icon-holder">
-                  <i class="icon-HTML-5"></i>
-                </div>
-                <div class="service-text">
-                  <h3>Front-end Development</h3>
-                  <p>Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-              </div>
-              <div class="service-item-box style-6">
-                <div class="icon-holder">
-                  <i class="icon-Digital-Design"></i>
-                </div>
-                <div class="service-text">
-                  <h3>Web Design</h3>
-                  <p>Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>  
-              </div>           
-            </div> <!-- end service item -->
-
-            <div class="col-sm-4 mb-40">
-              <div class="service-item-box style-6">
-                <div class="icon-holder">
-                  <i class="icon-Mobile-Touch"></i>
-                </div>
-                <div class="service-text">
-                  <h3>App Design</h3>
-                  <p>Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>  
-              </div>
-              <div class="service-item-box style-6">
-                <div class="icon-holder">
-                  <i class="icon-Sign-Contract"></i>
-                </div>
-                <div class="service-text">
-                  <h3>Copywriting</h3>
-                  <p>Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-              </div>           
-            </div> <!-- end service item -->
-
-          </div>
-        </div>
-      </section> <!-- end services -->
-
-
-      <!-- Portfolio Slider -->
-      <section class="section-wrap nopadding" id="portfolio">
-        <div class="container-fluid nopadding">
-
-          <div id="works-slider" class="flickity-slider-wrap items-4 mfp-hover" data-autoplay="true" data-arrows="true">
-
-            <div class="gallery-cell work-item hover-trigger hover-6">
-              <div class="work-container">
-                <div class="work-img">
-                  <a href="http://vimeo.com/19270640" class="lightbox-video">
-                    <img src="img/portfolio/stockholm/1.jpg" alt="">
-                    <div class="hover-overlay">
-                      <div class="work-description">
-                        <h3>Vimeo Video</h3>
-                        <span>Photography</span>
-                      </div>
-                    </div>
-                  </a>              
-                </div>
-              </div> 
-            </div> <!-- end work-item -->
-
-            <div class="gallery-cell work-item hover-trigger hover-6">
-              <div class="work-container">
-                <div class="work-img">
-                  <a href="https://www.youtube.com/watch?v=Scxs7L0vhZ4?autoplay=1" class="lightbox-video">
-                    <img src="img/portfolio/stockholm/2.jpg" alt="">
-                    <div class="hover-overlay">
-                      <div class="work-description">
-                        <h3>Youtube Video</h3>
-                        <span>Photography</span>
-                      </div>
-                    </div>
-                  </a>              
-                </div>
-              </div> 
-            </div> <!-- end work-item -->
-
-            <div class="gallery-cell work-item hover-trigger hover-6">
-              <div class="work-container">
-                <div class="work-img">
-                  <a href="img/portfolio/stockholm/3.jpg" class="lightbox-img" title="Lonely Forest">
-                    <img src="img/portfolio/stockholm/3.jpg" alt="">
-                    <div class="hover-overlay">
-                      <div class="work-description">
-                        <h3>Minimal Table</h3>
-                        <span>Photography</span>
-                      </div>
-                    </div>
-                  </a>              
-                </div>
-              </div> 
-            </div> <!-- end work-item -->
-
-            <div class="gallery-cell work-item hover-trigger hover-6">
-              <div class="work-container">
-                <div class="work-img">
-                  <a href="img/portfolio/stockholm/4.jpg" class="lightbox-img" title="Lonely Forest">
-                    <img src="img/portfolio/stockholm/4.jpg" alt="">
-                    <div class="hover-overlay">
-                      <div class="work-description">
-                        <h3>Broshure</h3>
-                        <span>Branding</span>
-                      </div>
-                    </div>
-                  </a>              
-                </div>
-              </div> 
-            </div> <!-- end work-item -->
-
-            <div class="gallery-cell work-item hover-trigger hover-6">
-              <div class="work-container">
-                <div class="work-img">
-                  <a href="img/portfolio//ny/5.jpg" class="lightbox-img" title="Lonely Forest">
-                    <img src="img/portfolio/stockholm/5.jpg" alt="">
-                    <div class="hover-overlay">
-                      <div class="work-description">
-                        <h3>Simple Interior</h3>
-                        <span>Design</span>
-                      </div>
-                    </div>
-                  </a>              
-                </div>
-              </div> 
-            </div> <!-- end work-item -->
-
-            <div class="gallery-cell work-item hover-trigger hover-6">
-              <div class="work-container">
-                <div class="work-img">
-                  <a href="img/portfolio//ny/6.jpg" class="lightbox-img" title="Lonely Forest">
-                    <img src="img/portfolio/stockholm/6.jpg" alt="">
-                    <div class="hover-overlay">
-                      <div class="work-description">
-                        <h3>Identity</h3>
-                        <span>Branding</span>
-                      </div>
-                    </div>
-                  </a>              
-                </div>
-              </div> 
-            </div> <!-- end work-item -->
-
-          </div>  <!-- end slider -->
-
-        </div>
-      </section> <!-- end portfolio slider -->
-
-      <!-- Work Experience -->
-      <section class="section-wrap-lg work-experience" id="experience">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 mb-40">
-              <h2>Work Experience</h2>              
-            </div>
-            <div class="col-sm-8">
-              <div class="work-experience-item">
-                <span class="time-period">July 2013 - present</span>
-                <h4>Senior Art Director&nbsp; | &nbsp;Googol</h4>
-                <p class="mb-0">We possess within us two minds. So far I have written of the conscious mind. This Theme is the Best on ThemeForest. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula, magna et bibendum malesuada, purus augue suscipit dolor, vitae fringilla dui nibh non lectus. Curabitur in pellentesque tortor. Nunc posuere vestibulum augue, quis posuere orci blandit vitae. Suspendisse dignissim elit dui, ac dictum felis interdum nec.</p>
-              </div>
-              <div class="work-experience-item">
-                <span class="time-period">August 2007 - July 2013</span>
-                <h4>Web Developer&nbsp; | &nbsp;Apule</h4>
-                <p class="mb-0">We possess within us two minds. So far I have written of the conscious mind. This Theme is the Best on ThemeForest. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula, magna et bibendum malesuada, purus augue suscipit dolor, vitae fringilla dui nibh non lectus. Curabitur in pellentesque tortor. Nunc posuere vestibulum augue, quis posuere orci blandit vitae. Suspendisse dignissim elit dui, ac dictum felis interdum nec.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> <!-- end work experience -->
-
-      <!-- divider -->
-      <div class="container">
-        <hr class="nomargin">
-      </div>
-
-      <!-- Education -->
-      <section class="section-wrap-lg education pb-110" id="education">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 mb-40">
-              <h2>Education</h2>              
-            </div>
-            <div class="col-sm-4 mb-40">
-              <div class="education-item">
-                <span class="time-period">2014 - 2016</span>
-                <h4>Master Degree in UI Web Design</h4>
-                <span class="place-of-study">University of New South Wales</span>
-              </div>
-              <div class="education-item">
-                <span class="time-period">2004 - 2009</span>
-                <h4>Software Engineering</h4>
-                <span class="place-of-study">Oxford London</span>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="education-item">
-                <span class="time-period">2010 - 2013</span>
-                <h4>Computer Science</h4>
-                <span class="place-of-study">California Institute Technology</span>
-              </div>
-              <div class="education-item">
-                <span class="time-period">1999- 2004</span>
-                <h4>Bachelor of Computer Technology</h4>
-                <span class="place-of-study">St. Paul University</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> <!-- end education -->
-
-
-      <!-- Testimonials -->
-      <section class="section-wrap relative testimonials bg-parallax" style="background-image: url(img/parallax/testimonials_bg_2.jpg);">
-        <div class="container relative">
-
-          <div class="row heading-row mb-20">
-            <div class="col-md-6 col-md-offset-3 text-center">
-              <h2 class="heading bottom-line white">Satisfied Clients</h2>
-            </div>
-          </div>
-
-          <div id="owl-testimonials" class="owl-carousel owl-theme light-arrows text-center">
-
-            <div class="item">
-              <div class="testimonial">
-                <p class="testimonial-text">I’am amazed, I should say thank you so much for your awesome template. Design is so good and neat, every detail has been taken care these team are realy amazing and talented!</p>
-                <span class="uppercase">Donald Trump / CEO of Trump organization</span>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="testimonial">
-                <p class="testimonial-text">This is the excellent theme. It has many useful features that can be use for any kind of business. The support is just amazing and design</p>
-                <span class="uppercase">John C. Marshall / Art Director</span>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="testimonial">
-                <p class="testimonial-text">Needless to say, beautifully designed theme that serves many purpose. Even more sutomers support is the best! Highly recommend this theme to anyone who enjoys a fine product.</p>
-                <span class="uppercase">Matthew Whilson / PR Agent</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> <!-- end testimonials -->
-
-
-      <!-- Contact -->
-      <section class="section-wrap-lg contact" id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 mb-40">
-              <h2>Contact Me</h2>              
-            </div>
-
-            <div class="col-sm-4 mb-40">
-              <p>Lorem ipsum dolor sit amet, is consectetuer awesome adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-
-              <ul class="contact-info mt-50">
-                <li><address>Adena Apartment Melbourne, Australia 48924</address></li>
-                <li><span>Phone: </span><a href="tel:+63-9202-740-366">+63 9202740366</a></span></li>
-                <li><span>Email: </span><a href="mailto:themesupport@gmail.com">themesupport@gmail.com</a></li>
-                <li><span>Skype: </span>gazetheme</li>
+                  <!-- LAYER NR. 2 -->
+                  <div class="tp-caption medium-text alt-font italic"
+                    data-x="center"
+                    data-y="center"
+                    data-voffset="[36,36,36,25]"
+                    data-fontsize="[20,20,18,18]"
+                    data-lineheight="[36]"
+                    data-textAlign="['center']"
+                    data-width="[none,none,none,300]"
+                    data-whitespace="[nowrap, nowrap, nowrap, normal]"
+                    data-transform_idle="o:1;s:700"
+                    data-transform_in="sX:0.7;sY:0.7;opacity:0;s:1000;e:Power3.easeInOut;"
+                    data-transform_out="sX:0.7;sY:0.7;opacity:0;s:1000;e:Power3.easeInOut;"
+                    data-start="1100"
+                    data-elementdelay="0.01">Enthrall Your Visitors
+                  </div>           
+           
+                </li>
               </ul>
 
             </div>
+          </div>
+        </section> <!-- end rev slider -->
 
-            <div class="col-sm-4">
-              <form id="contact-form" class="contact-form style-2" action="#">
-                <div class="contact-name">
-                  <input name="name" id="name" type="text" placeholder="Name*">
-                </div>
-                <div class="contact-email">
-                  <input name="mail" id="mail" type="email" placeholder="E-mail*">
-                </div>
-                <textarea name="comment" id="comment" rows="5" placeholder="Message"></textarea>
-                <input type="submit" class="btn btn-lg btn-color btn-submit" value="Send Message" id="submit-message">
-                <div id="msg" class="message"></div>
-              </form>
-            </div> <!-- end col -->
+        <!-- Intro -->
+        <section class="section-wrap-md intro style-4" id="intro">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
+                <p class="lead mb-0">
+                  Gaze is a creative website with lots of stylish features and unlimited options. Impress your clients with Gaze.
+                </p>
+              </div> <!-- end col -->
+            </div>
+          </div>
+        </section> <!-- end intro -->
+
+        <!-- Portfolio Slider -->
+        <section class="section-wrap nopadding">
+          <div class="container-fluid nopadding">
+
+            <div id="works-slider" class="flickity-slider-wrap items-4 mfp-hover" data-autoplay="true" data-arrows="true">
+
+              <div class="gallery-cell work-item hover-trigger hover-6">
+                <div class="work-container">
+                  <div class="work-img">
+                    <a href="http://vimeo.com/19270640" class="lightbox-video">
+                      <img src="img/portfolio/stockholm/1.jpg" alt="">
+                      <div class="hover-overlay">
+                        <div class="work-description">
+                          <h3>Vimeo Video</h3>
+                          <span>Photography</span>
+                        </div>
+                      </div>
+                    </a>              
+                  </div>
+                </div> 
+              </div> <!-- end work-item -->
+
+              <div class="gallery-cell work-item hover-trigger hover-6">
+                <div class="work-container">
+                  <div class="work-img">
+                    <a href="https://www.youtube.com/watch?v=Scxs7L0vhZ4?autoplay=1" class="lightbox-video">
+                      <img src="img/portfolio/stockholm/2.jpg" alt="">
+                      <div class="hover-overlay">
+                        <div class="work-description">
+                          <h3>Youtube Video</h3>
+                          <span>Photography</span>
+                        </div>
+                      </div>
+                    </a>              
+                  </div>
+                </div> 
+              </div> <!-- end work-item -->
+
+              <div class="gallery-cell work-item hover-trigger hover-6">
+                <div class="work-container">
+                  <div class="work-img">
+                    <a href="img/portfolio/stockholm/3.jpg" class="lightbox-img" title="Lonely Forest">
+                      <img src="img/portfolio/stockholm/3.jpg" alt="">
+                      <div class="hover-overlay">
+                        <div class="work-description">
+                          <h3>Minimal Table</h3>
+                          <span>Photography</span>
+                        </div>
+                      </div>
+                    </a>              
+                  </div>
+                </div> 
+              </div> <!-- end work-item -->
+
+              <div class="gallery-cell work-item hover-trigger hover-6">
+                <div class="work-container">
+                  <div class="work-img">
+                    <a href="img/portfolio/stockholm/4.jpg" class="lightbox-img" title="Lonely Forest">
+                      <img src="img/portfolio/stockholm/4.jpg" alt="">
+                      <div class="hover-overlay">
+                        <div class="work-description">
+                          <h3>Broshure</h3>
+                          <span>Branding</span>
+                        </div>
+                      </div>
+                    </a>              
+                  </div>
+                </div> 
+              </div> <!-- end work-item -->
+
+              <div class="gallery-cell work-item hover-trigger hover-6">
+                <div class="work-container">
+                  <div class="work-img">
+                    <a href="img/portfolio//ny/5.jpg" class="lightbox-img" title="Lonely Forest">
+                      <img src="img/portfolio/stockholm/5.jpg" alt="">
+                      <div class="hover-overlay">
+                        <div class="work-description">
+                          <h3>Simple Interior</h3>
+                          <span>Design</span>
+                        </div>
+                      </div>
+                    </a>              
+                  </div>
+                </div> 
+              </div> <!-- end work-item -->
+
+              <div class="gallery-cell work-item hover-trigger hover-6">
+                <div class="work-container">
+                  <div class="work-img">
+                    <a href="img/portfolio//ny/6.jpg" class="lightbox-img" title="Lonely Forest">
+                      <img src="img/portfolio/stockholm/6.jpg" alt="">
+                      <div class="hover-overlay">
+                        <div class="work-description">
+                          <h3>Identity</h3>
+                          <span>Branding</span>
+                        </div>
+                      </div>
+                    </a>              
+                  </div>
+                </div> 
+              </div> <!-- end work-item -->
+
+            </div>  <!-- end slider -->
 
           </div>
-        </div>
-      </section> <!-- end contact -->
+        </section> <!-- end portfolio slider -->
 
+        <!-- Icon Boxes -->
+        <section class="section-wrap-md icon-boxes pb-70 pb-mdm-20">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 mb-40">
+                <div class="service-item-box style-4">
+                  <div class="icon-holder">
+                    <i class="icon-Lamp-3"></i>
+                  </div>
+                  <div class="service-text">
+                    <h3>Attention to Details</h3>
+                    <p>Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur. Powered with WordPress.</p>
+                  </div>
+                </div>            
+              </div> <!-- end service item -->
 
-      <!-- Google Map -->
-      <div class="gmap-btn">Open Map</div>  
-      <div class="gmap gmap-hidden" id="google-map" data-address="Melrose Arch, Johannesburg, South Africa"></div>
+              <div class="col-sm-4 mb-40">
+                <div class="service-item-box style-4">
+                  <div class="icon-holder">
+                    <i class="icon-Dot-Chart1"></i>
+                  </div>
+                  <div class="service-text">
+                    <h3>SEO Optimized</h3>
+                    <p>Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur. Powered with WordPress.</p>
+                  </div>  
+                </div>            
+              </div> <!-- end service item -->
 
+              <div class="col-sm-4 mb-40">
+                <div class="service-item-box style-4">
+                  <div class="icon-holder">
+                    <i class="icon-Mobile-Touch"></i>
+                  </div>
+                  <div class="service-text">
+                    <h3>Mobile Friendly</h3>
+                    <p>Gaze is a simple and elegant template with tons of features. Lorem ipsum dolor sit amet, consectetur. Powered with WordPress.</p>
+                  </div>  
+                </div>            
+              </div> <!-- end service item -->
 
-      <!-- Footer Type-5 -->
-      <footer class="footer footer-type-5 bg-white">
+            </div>
+          </div>
+        </section> <!-- end icon boxes -->
+
         <div class="container">
-          <div class="footer-widgets">
+          <hr class="nomargin">
+        </div>
+
+        <!-- CTA -->
+        <section class="section-wrap call-to-action style-3">
+          <div class="container">
+            
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 col-sm-12 text-center">   
+                <h3 class="uppercase">Looking for Perfect Website?</h3>
+                <p>Gaze is a simple and elegant template with tons of features. This is the real examples website in any kind of businessess.Lorem ipsum dolor sit amet, consectetur. Nullam scelerisque facilisisenim.</p>
+                <div class="cta-buttons mt-30">
+                  <a href="#" class="btn btn-lg btn-color"><span>Check it Out</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> <!-- end CTA -->
+
+      </main> <!-- end main container -->
+
+      <!-- Footer Type-7 -->
+      <footer class="footer footer-type-7">
+        <div class="container">
+          <div class="footer-widgets top-divider pb-mdm-20">
             <div class="row">
 
-              <div class="col-md-4 col-md-offset-4 text-center">
-
-                <div class="copyright">
-                  <span>
-                    &copy; 2017 Gaze Theme, Made by <a href="http://deothemes.com">DeoThemes</a>
-                  </span>
+              <div class="col-sm-6 sm-text-center">
+                <div class="widget footer-about-us">
+                  <a href="index-toronto.html">
+                    <img class="logo" src="img/logo_dark.png" alt="logo">
+                  </a>
                 </div>
+              </div>
 
-                <div class="footer-socials mt-40">
-                  <div class="social-icons nobase dark text-center">
+              <div class="col-sm-6">
+                <!-- <div class="footer-socials"> -->
+                  <div class="social-icons rounded medium text-right sm-text-center">
                     <a href="#"><i class="fa fa-twitter"></i></a>
                     <a href="#"><i class="fa fa-facebook"></i></a>                  
                     <a href="#"><i class="fa fa-google-plus"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-vimeo"></i></a>
                   </div>
-                </div>                
+                <!-- </div> -->
               </div>
 
             </div>
           </div>    
-        </div> <!-- end container -->
-      </footer> <!-- end footer -->
-      
+        </div>
+      </footer> <!-- end footer --> 
 
     </div> <!-- end content wrapper -->
   </div> <!-- end main wrapper -->
@@ -544,77 +591,23 @@
   <!-- jQuery Scripts -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- 
-    1. Generate your key here - https://developers.google.com/maps/documentation/javascript/get-api-key
-    2. Paste your key in the script below.
-  -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoQ3_zzRfW-hYspkwr5kvwCwLPGZsN4nw"></script>
-  <script type="text/javascript" src="js/gmap3.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
+  <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript" src="js/rev-slider.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
 
 
-  <!-- Google Map -->
-  <script type="text/javascript">
-    $(document).ready( function(){
+  <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 
-      function initMap() {
-
-        var gmapDiv = $("#google-map");
-        var gmapMarker = gmapDiv.attr("data-address");
-
-        gmapDiv.gmap3({
-          zoom: 16,
-          address: gmapMarker,
-          oomControl: true,
-          navigationControl: true,
-          scrollwheel: false,
-          styles: [
-            {
-            "featureType":"all",
-            "elementType":"all",
-              "stylers":[
-                { "saturation":"0" }
-              ]
-          }]
-        })
-        .marker({
-          address: gmapMarker,
-          icon: "img/map_pin.png"
-        })
-        .infowindow({
-          content: "V Tytana St, Manila, Philippines"
-        })
-        .then(function (infowindow) {
-          var map = this.get(0);
-          var marker = this.get(1);
-          marker.addListener('click', function() {
-            infowindow.open(map, marker);
-          });
-        });
-      }
-
-
-      // Map Button
-      $(".gmap-btn").on("click", function() {
-
-        $(".gmap").slideToggle();
-
-        if ($(this).text() == "Close Map")
-         $(this).text("Open Map")
-        else
-         $(this).text("Close Map");
-      });
-
-      $(".gmap-btn").one("click", function() {
-        setTimeout(function(){
-          initMap();
-        }, 500);
-      });
-
-    });
-  </script>
-
-
+    
 </body>
 </html>
