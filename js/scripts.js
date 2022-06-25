@@ -983,10 +983,6 @@
     e.preventDefault();
     var $this = $(this);
 
-    const form = $(e.target);
-    const json = convertFormToJSON(form);
-    console.log(json);
-
     $.ajax({
       type: "POST",
       url: 'https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
@@ -994,7 +990,7 @@
       contentType: 'application/json',
       crossDomain: true,
       cache: false,
-      data: json,
+      data: $('#contact-form').serialize(),
       success: function(data) {
         console.log(data);
         if(data.info !== 'error'){
