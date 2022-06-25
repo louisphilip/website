@@ -988,7 +988,6 @@
         if(data.info !== 'error'){
           $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
           message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-          alert(JSON.stringify(data));
         } else {
           message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
         }
