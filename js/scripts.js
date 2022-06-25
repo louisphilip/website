@@ -980,7 +980,8 @@
       dataType: 'json',
       contentType : 'application/json',
       cache: false,
-      data: JSON.stringify($('#contact-form')),
+      // senderName, senderEmail, message
+      data: JSON.stringify({ "senderName": $('#name').val(), "senderEmail": $('#mail').val(), "message": $('#comment').val() }),
       success: function(data) {
 
         if(data.info !== 'error'){
