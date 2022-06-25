@@ -973,15 +973,21 @@
     e.preventDefault();
 
     var $this = $(this);
+
+    const body = JSON.stringify({
+      name: $('#name').val(),
+      mail: $('#mail').val(),
+      comment: $('#comment').val(),
+    });
     
     $.ajax({
       type: "POST",
-      url: 'contact.php',
+      url: 'https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
       dataType: 'json',
       contentType: 'application/json',
       crossDomain: true,
       cache: false,
-      data: $('#contact-form').serialize(),
+      data: body,
       success: function(data) {
         console.log(data);
         if(data.info !== 'error'){
@@ -996,41 +1002,41 @@
 
   /* NEW Contact Form
   -------------------------------------------------------*/
-  const form = document.querySelector("contact-form");
-  form.addEventListener("submit-message", (event) => {
-  // prevent the form submit from refreshing the page
-  event.preventDefault();
+//   const form = document.querySelector("contact-form");
+//   form.addEventListener("submit-message", (event) => {
+//   // prevent the form submit from refreshing the page
+//   event.preventDefault();
 
-  const { name, mail, comment } = event.target;
+//   const { name, mail, comment } = event.target;
 
-	// Use your API endpoint URL you copied from the previous step
-  const endpoint =
-    "<https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email>";
-  // We use JSON.stringify here so the data can be sent as a string via HTTP
-	const body = JSON.stringify({
-    name: name.value,
-    mail: mail.value,
-    comment: comment.value
-  });
-  const requestOptions = {
-    method: "POST",
-    body
-  };
+// 	// Use your API endpoint URL you copied from the previous step
+//   const endpoint =
+//     "<https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email>";
+//   // We use JSON.stringify here so the data can be sent as a string via HTTP
+// 	const body = JSON.stringify({
+//     name: name.value,
+//     mail: mail.value,
+//     comment: comment.value
+//   });
+//   const requestOptions = {
+//     method: "POST",
+//     body
+//   };
 
-  fetch(endpoint, requestOptions)
-    .then((response) => {
-      if (!response.ok) throw new Error("Error in fetch");
-      return response.json();
-    })
-    .then((response) => {
-      document.getElementById("result-text").innerText =
-        "Email sent successfully!";
-    })
-    .catch((error) => {
-      document.getElementById("result-text").innerText =
-        "An unkown error occured.";
-    });
-});
+//   fetch(endpoint, requestOptions)
+//     .then((response) => {
+//       if (!response.ok) throw new Error("Error in fetch");
+//       return response.json();
+//     })
+//     .then((response) => {
+//       document.getElementById("result-text").innerText =
+//         "Email sent successfully!";
+//     })
+//     .catch((error) => {
+//       document.getElementById("result-text").innerText =
+//         "An unkown error occured.";
+//     });
+// });
 
 
   /* Scroll to Top
