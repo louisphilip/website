@@ -965,28 +965,19 @@
 
   /* Contact Form
   -------------------------------------------------------*/
-
-  // Convert function for serialized data
-  function convertFormToJSON(form) {
-    const array = $(form).serializeArray(); // Encodes the set of form elements as an array of names and values.
-    const json = {};
-    $.each(array, function () {
-      json[this.name] = this.value || "";
-    });
-    return json;
-  }
-
   var submitContact = $('#submit-message'),
     message = $('#msg');
 
   submitContact.on('click', function(e){
     e.preventDefault();
     // var $this = $(this);
+    // var formData = new FormData($("#contact-form")[0]);
     var formData = {
       name: $("#name").val(),
       mail: $("#mail").val(),
       comment: $("#comment").val()
     };
+    console.log(formData);
 
     $.ajax({
       type: "POST",
