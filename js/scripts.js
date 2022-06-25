@@ -966,7 +966,7 @@
   /* Contact Form
   -------------------------------------------------------*/
   const form = document.querySelector("contact-form");
-  form.addEventListener("submit-message", (event) => {
+  form.addEventListener("submit", (event) => {
     // prevent the form submit from refreshing the page
     event.preventDefault();
   
