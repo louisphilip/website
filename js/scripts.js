@@ -982,22 +982,17 @@
   submitContact.on('click', function(e){
     e.preventDefault();
     // var $this = $(this);
-    var name = $("#name").val(),
-      mail = $("#mail").val(),
-      comment = $("#comment").val();
+    var formData = {
+      name: $("#name").val(),
+      mail: $("#mail").val(),
+      comment: $("#comment").val()
+    };
 
     $.ajax({
       type: "POST",
       url: 'https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/contact-us',
-      dataType: 'json',
       contentType: 'application/json',
-      crossDomain: true,
-      cache: false,
-      data: JSON.stringify({
-        'name': name,
-        'mail': mail,
-        'comment': comment
-    }),
+      data: JSON.stringify(formData),
       success: function(data) {
         console.log(data);
         if(data.info !== 'error'){
