@@ -966,33 +966,33 @@
   /* Contact Form
   -------------------------------------------------------*/
 
-  // var submitContact = $('#submit-message'),
-  //   message = $('#msg');
+  var submitContact = $('#submit-message'),
+    message = $('#msg');
 
-  // submitContact.on('click', function(e){
-  //   e.preventDefault();
+  submitContact.on('click', function(e){
+    e.preventDefault();
 
-  //   var $this = $(this);
+    var $this = $(this);
     
-  //   $.ajax({
-  //     type: "POST",
-  //     url: 'https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
-  //     dataType: 'json',
-  //     contentType: 'application/json',
-  //     crossDomain: true,
-  //     cache: false,
-  //     data: JSON.stringify({ "body": {"name": $('#name').val(), "mail": $('#mail').val(), "comment": $('#comment').val() }}),
-  //     success: function(data) {
+    $.ajax({
+      type: "POST",
+      url: 'https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
+      dataType: 'json',
+      contentType: 'application/json',
+      crossDomain: true,
+      cache: false,
+      data: JSON.stringify(this.formData),
+      success: function(data) {
 
-  //       if(data.info !== 'error'){
-  //         $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
-  //         message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-  //       } else {
-  //         message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-  //       }
-  //     }
-  //   });
-  // });
+        if(data.info !== 'error'){
+          $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
+          message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+        } else {
+          message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+        }
+      }
+    });
+  });
 
   /* NEW Contact Form
   -------------------------------------------------------*/
