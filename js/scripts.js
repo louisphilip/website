@@ -966,15 +966,55 @@
   /* Contact Form
   -------------------------------------------------------*/
 
-  var submitContact = $('#submit-message'),
-    message = $('#msg');
+  // var submitContact = $('#submit-message'),
+  //   message = $('#msg');
 
-  submitContact.on('click', function(e){
-    e.preventDefault();
+  // submitContact.on('click', function(e){
+  //   e.preventDefault();
 
-    var $this = $(this);
-    const { name, mail, comment } = e.target;
-    const endpoint =
+  //   var $this = $(this);
+  //   const { name, mail, comment } = e.target;
+  //   const endpoint =
+  //   "<https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email>";
+  // // We use JSON.stringify here so the data can be sent as a string via HTTP
+	// const body = JSON.stringify({
+  //   name: name.value,
+  //   mail: mail.value,
+  //   comment: comment.value
+  // });
+  // const requestOptions = {
+  //   method: "POST",
+  //   body
+  // };
+
+  // fetch(endpoint, requestOptions)
+  //   .then((response) => {
+  //     message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+  //     if (!response.ok) throw new Error("Error in fetch");
+  //     return response.json();
+  //   })
+  //   .then((response) => {
+  //     $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
+  //     message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+  //     console.log("Email sent successfully!");
+  //   })
+  //   .catch((error) => {
+  //     document.getElementById("result-text").innerText =
+  //       "An unkown error occured.";
+  //   });
+  // });
+
+  /* NEW Contact Form
+  -------------------------------------------------------*/
+  const form = document.querySelector("contact-form");
+  form.addEventListener("submit-message", (event) => {
+  // prevent the form submit from refreshing the page
+  event.preventDefault();
+
+  const { name, mail, comment } = event.target;
+
+	// Use your API endpoint URL you copied from the previous step
+  const endpoint =
     "<https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email>";
   // We use JSON.stringify here so the data can be sent as a string via HTTP
 	const body = JSON.stringify({
@@ -989,58 +1029,18 @@
 
   fetch(endpoint, requestOptions)
     .then((response) => {
-      message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
       if (!response.ok) throw new Error("Error in fetch");
       return response.json();
     })
     .then((response) => {
-      $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
-      message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-      console.log("Email sent successfully!");
+      document.getElementById("result-text").innerText =
+        "Email sent successfully!";
     })
     .catch((error) => {
       document.getElementById("result-text").innerText =
         "An unkown error occured.";
     });
-  });
-
-  /* NEW Contact Form
-  -------------------------------------------------------*/
-//   const form = document.querySelector("contact-form");
-//   form.addEventListener("submit-message", (event) => {
-//   // prevent the form submit from refreshing the page
-//   event.preventDefault();
-
-//   const { name, mail, comment } = event.target;
-
-// 	// Use your API endpoint URL you copied from the previous step
-//   const endpoint =
-//     "<https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email>";
-//   // We use JSON.stringify here so the data can be sent as a string via HTTP
-// 	const body = JSON.stringify({
-//     name: name.value,
-//     mail: mail.value,
-//     comment: comment.value
-//   });
-//   const requestOptions = {
-//     method: "POST",
-//     body
-//   };
-
-//   fetch(endpoint, requestOptions)
-//     .then((response) => {
-//       if (!response.ok) throw new Error("Error in fetch");
-//       return response.json();
-//     })
-//     .then((response) => {
-//       document.getElementById("result-text").innerText =
-//         "Email sent successfully!";
-//     })
-//     .catch((error) => {
-//       document.getElementById("result-text").innerText =
-//         "An unkown error occured.";
-//     });
-// });
+});
 
 
   /* Scroll to Top
