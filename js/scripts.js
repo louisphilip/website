@@ -976,7 +976,7 @@
     
     $.ajax({
       type: "POST",
-      url: 'contact.php',
+      url: 'https://67wo4whboe.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
       dataType: 'json',
       cache: false,
       data: $('#contact-form').serialize(),
@@ -1003,7 +1003,7 @@
 
 // 	// Use your API endpoint URL you copied from the previous step
 //   const endpoint =
-//     "https://q31brhbhl9.execute-api.eu-west-1.amazonaws.com/default/send-contact-email";
+//     "https://67wo4whboe.execute-api.eu-west-1.amazonaws.com/default/send-contact-email";
 //   // We use JSON.stringify here so the data can be sent as a string via HTTP
 // 	const body = JSON.stringify({
 //     senderName: name.value,
