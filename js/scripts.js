@@ -978,6 +978,7 @@
       type: "POST",
       url: 'https://4juhy7gm3g.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
       dataType: 'json',
+      contentType: 'application/json',
       crossDomain: true,
       cache: false,
       data: $('#contact-form').serialize(),
