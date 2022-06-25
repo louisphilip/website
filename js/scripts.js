@@ -966,20 +966,27 @@
   /* Contact Form
   -------------------------------------------------------*/
 
+  // Convert function for serialized data
+  function convertFormToJSON(form) {
+    const array = $(form).serializeArray(); // Encodes the set of form elements as an array of names and values.
+    const json = {};
+    $.each(array, function () {
+      json[this.name] = this.value || "";
+    });
+    return json;
+  }
+
   var submitContact = $('#submit-message'),
     message = $('#msg');
 
   submitContact.on('click', function(e){
     e.preventDefault();
-
     var $this = $(this);
 
-    const body = JSON.stringify({
-      name: $('name').val(),
-      mail: $('mail').val(),
-      comment: $('comment').val(),
-    });
-    
+    const form = $(e.target);
+    const json = convertFormToJSON(form);
+    console.log(json);
+
     $.ajax({
       type: "POST",
       url: 'https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
@@ -987,7 +994,7 @@
       contentType: 'application/json',
       crossDomain: true,
       cache: false,
-      data: body,
+      data: json,
       success: function(data) {
         console.log(data);
         if(data.info !== 'error'){
