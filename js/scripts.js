@@ -981,7 +981,10 @@
 
   submitContact.on('click', function(e){
     e.preventDefault();
-    var $this = $(this);
+    // var $this = $(this);
+    var name = $("#name").val(),
+      mail = $("#mail").val(),
+      comment = $("#comment").val();
 
     $.ajax({
       type: "POST",
@@ -990,7 +993,11 @@
       contentType: 'application/json',
       crossDomain: true,
       cache: false,
-      data: $('#contact-form').serialize(),
+      data: JSON.stringify({
+        'name': name,
+        'mail': mail,
+        'comment': comment
+    }),
       success: function(data) {
         console.log(data);
         if(data.info !== 'error'){
