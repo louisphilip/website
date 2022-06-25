@@ -973,30 +973,34 @@
     e.preventDefault();
 
     var $this = $(this);
+    const { name, mail, comment } = e.target;
+    const endpoint =
+    "<https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email>";
+  // We use JSON.stringify here so the data can be sent as a string via HTTP
+	const body = JSON.stringify({
+    name: name.value,
+    mail: mail.value,
+    comment: comment.value
+  });
+  const requestOptions = {
+    method: "POST",
+    body
+  };
 
-    const body = JSON.stringify({
-      name: $('#name').val(),
-      mail: $('#mail').val(),
-      comment: $('#comment').val(),
-    });
-    
-    $.ajax({
-      type: "POST",
-      url: 'https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
-      dataType: 'json',
-      contentType: 'application/json',
-      crossDomain: true,
-      cache: false,
-      data: body,
-      success: function(data) {
-        console.log(data);
-        if(data.info !== 'error'){
-          $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
-          message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-        } else {
-          message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-        }
-      }
+  fetch(endpoint, requestOptions)
+    .then((response) => {
+      message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+      if (!response.ok) throw new Error("Error in fetch");
+      return response.json();
+    })
+    .then((response) => {
+      $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
+      message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+      console.log("Email sent successfully!");
+    })
+    .catch((error) => {
+      document.getElementById("result-text").innerText =
+        "An unkown error occured.";
     });
   });
 
