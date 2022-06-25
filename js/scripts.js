@@ -978,9 +978,10 @@
       type: "POST",
       url: 'https://4juhy7gm3g.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
       dataType: 'json',
-      contentType: 'application/json',
-      crossDomain: true,
+      contentType : 'application/json',
       cache: false,
+      crossDomain: true,
+      // senderName, senderEmail, message
       data: JSON.stringify({ "senderName": $('#name').val(), "senderEmail": $('#mail').val(), "message": $('#comment').val() }),
       success: function(data) {
 
