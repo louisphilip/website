@@ -978,13 +978,15 @@
       type: "POST",
       url: 'https://4juhy7gm3g.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
       dataType: 'json',
+      contentType : 'application/json',
       cache: false,
-      data: $('#contact-form').serialize(),
+      data: JSON.stringify($('#contact-form')),
       success: function(data) {
 
         if(data.info !== 'error'){
           $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
           message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+          alert(JSON.stringify(data));
         } else {
           message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
         }
