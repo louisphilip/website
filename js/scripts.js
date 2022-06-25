@@ -972,10 +972,10 @@
     e.preventDefault();
     // var $this = $(this);
     // var formData = new FormData($("#contact-form")[0]);
-    var formData = {
+    var formData = { body :{
       name: $("#name").val(),
       mail: $("#mail").val(),
-      comment: $("#comment").val()
+      comment: $("#comment").val()}
     };
     console.log(formData);
 
@@ -983,9 +983,9 @@
       type: "POST",
       url: 'https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/contact-us',
       contentType: 'application/json',
-      data: JSON.stringify(formData),
+      data: formData,
       success: function(data) {
-        console.log(data);
+        console.log(`Data : ${data}`);
         if(data.info !== 'error'){
           $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
           message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
