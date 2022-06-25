@@ -976,7 +976,7 @@
     
     $.ajax({
       type: "POST",
-      url: 'https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
+      url: 'contact.php',
       dataType: 'json',
       contentType: 'application/json',
       crossDomain: true,
