@@ -973,7 +973,6 @@
     e.preventDefault();
 
     var $this = $(this);
-    var form_data = new FormData(this);
     
     $.ajax({
       type: "POST",
@@ -982,9 +981,9 @@
       contentType: 'application/json',
       crossDomain: true,
       cache: false,
-      data: form_data,
+      data: $('#contact-form').serialize(),
       success: function(data) {
-
+        console.log(data);
         if(data.info !== 'error'){
           $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
           message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
