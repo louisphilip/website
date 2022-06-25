@@ -980,6 +980,7 @@
       dataType: 'json',
       contentType : 'application/json',
       cache: false,
+      crossDomain: true,
       // senderName, senderEmail, message
       data: JSON.stringify({ "senderName": $('#name').val(), "senderEmail": $('#mail').val(), "message": $('#comment').val() }),
       success: function(data) {
