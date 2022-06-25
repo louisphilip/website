@@ -976,7 +976,7 @@
     
     $.ajax({
       type: "POST",
-      url: 'https://4juhy7gm3g.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
+      url: 'https://ibawg13nqa.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
       dataType: 'json',
       contentType: 'application/json',
       crossDomain: true,
