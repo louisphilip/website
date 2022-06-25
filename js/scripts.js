@@ -981,7 +981,7 @@
       contentType: 'application/json',
       crossDomain: true,
       cache: false,
-      data: JSON.stringify({ "body": {"senderName": $('#name').val(), "senderEmail": $('#mail').val(), "message": $('#comment').val() }}),
+      data: $('#contact-form').serialize(),
       success: function(data) {
 
         if(data.info !== 'error'){
