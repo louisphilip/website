@@ -973,6 +973,7 @@
     e.preventDefault();
 
     var $this = $(this);
+    var form_data = new FormData(this);
     
     $.ajax({
       type: "POST",
@@ -981,7 +982,7 @@
       contentType: 'application/json',
       crossDomain: true,
       cache: false,
-      data: JSON.stringify(this.formData),
+      data: form_data,
       success: function(data) {
 
         if(data.info !== 'error'){
