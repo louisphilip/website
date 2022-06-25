@@ -966,70 +966,70 @@
   /* Contact Form
   -------------------------------------------------------*/
 
-  // var submitContact = $('#submit-message'),
-  //   message = $('#msg');
+  var submitContact = $('#submit-message'),
+    message = $('#msg');
 
-  // submitContact.on('click', function(e){
-  //   e.preventDefault();
+  submitContact.on('click', function(e){
+    e.preventDefault();
 
-  //   var $this = $(this);
+    var $this = $(this);
     
-  //   $.ajax({
-  //     type: "POST",
-  //     url: 'https://4juhy7gm3g.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
-  //     dataType: 'json',
-  //     crossDomain: true,
-  //     cache: false,
-  //     data: $('#contact-form').serialize(),
-  //     success: function(data) {
+    $.ajax({
+      type: "POST",
+      url: 'https://4juhy7gm3g.execute-api.eu-west-1.amazonaws.com/default/send-contact-email',
+      dataType: 'json',
+      crossDomain: true,
+      cache: false,
+      data: $('#contact-form').serialize(),
+      success: function(data) {
 
-  //       if(data.info !== 'error'){
-  //         $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
-  //         message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-  //       } else {
-  //         message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-  //       }
-  //     }
-  //   });
-  // });
+        if(data.info !== 'error'){
+          $this.parents('form').find('input[type=text],input[type=email],textarea,select').filter(':visible').val('');
+          message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+        } else {
+          message.hide().removeClass('success').removeClass('error').addClass('error').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
+        }
+      }
+    });
+  });
 
   /* NEW Contact Form
   -------------------------------------------------------*/
-  const form = document.querySelector("contact-form");
-form.addEventListener("submit-message", (event) => {
-  // prevent the form submit from refreshing the page
-  event.preventDefault();
+//   const form = document.querySelector("contact-form");
+//   form.addEventListener("submit-message", (event) => {
+//   // prevent the form submit from refreshing the page
+//   event.preventDefault();
 
-  const { name, mail, comment } = event.target;
+//   const { name, mail, comment } = event.target;
 
-	// Use your API endpoint URL you copied from the previous step
-  const endpoint =
-    "<https://4juhy7gm3g.execute-api.eu-west-1.amazonaws.com/default/send-contact-email>";
-  // We use JSON.stringify here so the data can be sent as a string via HTTP
-	const body = JSON.stringify({
-    senderName: name.value,
-    senderEmail: mail.value,
-    message: comment.value
-  });
-  const requestOptions = {
-    method: "POST",
-    body
-  };
+// 	// Use your API endpoint URL you copied from the previous step
+//   const endpoint =
+//     "<https://4juhy7gm3g.execute-api.eu-west-1.amazonaws.com/default/send-contact-email>";
+//   // We use JSON.stringify here so the data can be sent as a string via HTTP
+// 	const body = JSON.stringify({
+//     senderName: name.value,
+//     senderEmail: mail.value,
+//     message: comment.value
+//   });
+//   const requestOptions = {
+//     method: "POST",
+//     body
+//   };
 
-  fetch(endpoint, requestOptions)
-    .then((response) => {
-      if (!response.ok) throw new Error("Error in fetch");
-      return response.json();
-    })
-    .then((response) => {
-      document.getElementById("result-text").innerText =
-        "Email sent successfully!";
-    })
-    .catch((error) => {
-      document.getElementById("result-text").innerText =
-        "An unkown error occured.";
-    });
-});
+//   fetch(endpoint, requestOptions)
+//     .then((response) => {
+//       if (!response.ok) throw new Error("Error in fetch");
+//       return response.json();
+//     })
+//     .then((response) => {
+//       document.getElementById("result-text").innerText =
+//         "Email sent successfully!";
+//     })
+//     .catch((error) => {
+//       document.getElementById("result-text").innerText =
+//         "An unkown error occured.";
+//     });
+// });
 
 
   /* Scroll to Top
